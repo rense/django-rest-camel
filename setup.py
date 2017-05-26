@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import os
-import sys
 from codecs import open
 
 from setuptools import setup, find_packages
+
 
 with open('README.rst') as r:
     readme = r.read()
@@ -17,7 +15,7 @@ long_description = '{}\n\n{}'.format(readme, history)
 
 setup(
     name='drf-camel',
-    version='0.3.1',
+    version='0.3.2',
     description='Camel case support for Django REST Framework.',
     long_description=long_description,
     author='Dominik Kozaczko',
