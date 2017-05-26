@@ -78,6 +78,3 @@ def underscorize(data):
         return type(data)(underscorize(x) for x in data)
 
     return data
-
-
-underscoreize = underscorize  # backward compatibility

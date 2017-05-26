@@ -18,7 +18,7 @@ long_description = '{}\n\n{}'.format(readme, history)
 setup(
     name='drf-camel',
     version='0.3.0',
-    description='Camel case JSON support for Django REST framework.',
+    description='Camel case support for Django REST Framework.',
     long_description=long_description,
     author='Dominik Kozaczko',
     author_email='dominik@kozaczko.info',
