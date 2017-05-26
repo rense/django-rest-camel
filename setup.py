@@ -15,12 +15,12 @@ long_description = '{}\n\n{}'.format(readme, history)
 
 setup(
     name='django-rest-camel',
-    version='0.3.3',
+    version='0.3.4',
     description='Camel case support for Django REST Framework.',
     long_description=long_description,
     author='Dominik Kozaczko',
     author_email='dominik@kozaczko.info',
-    url='https://github.com/dekoza/djangorestframework-camel-case',
+    url='https://github.com/dekoza/django-rest-camel',
     packages=find_packages(),
     license="BSD",
     keywords='djangorestframework_camel django rest camelcase camel',
