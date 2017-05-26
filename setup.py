@@ -3,42 +3,31 @@
 
 import os
 import sys
+from codecs import open
 
+from setuptools import setup, find_packages
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+with open('README.rst') as r:
+    readme = r.read()
 
-if sys.argv[-1] == 'publish':
-    os.system('python setup.py sdist upload')
-    sys.exit()
+with open('HISTORY.rst') as h:
+    history = h.read().replace('.. :changelog:', '')
 
-readme = open('README.rst').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
+long_description = '{}\n\n{}'.format(readme, history)
 
 setup(
-    name='djangorestframework-camel-case',
+    name='drf-camel',
     version='0.3.0',
     description='Camel case JSON support for Django REST framework.',
-    long_description=readme + '\n\n' + history,
-    author='Vitaly Babiy',
-    author_email='vbabiy86@gmail.com',
-    url='https://github.com/vbabiy/djangorestframework-camel-case',
-    packages=[
-        'djangorestframework_camel_case',
-    ],
-    package_dir={
-        'djangorestframework_camel_case': 'djangorestframework_camel_case'
-    },
-    include_package_data=True,
-    install_requires=[
-    ],
+    long_description=long_description,
+    author='Dominik Kozaczko',
+    author_email='dominik@kozaczko.info',
+    url='https://github.com/dekoza/djangorestframework-camel-case',
+    packages=find_packages(),
     license="BSD",
-    zip_safe=False,
-    keywords='djangorestframework_camel_case',
+    keywords='djangorestframework_camel rest camelcase camel',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',

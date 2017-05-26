@@ -2,12 +2,23 @@
 Credits
 =======
 
+Founding Father
+---------------
+
+* Vitaly Babiy <vbabiy86@gmail.com>
+
+
 Development Lead
 ----------------
 
-* Vitaly Babiy <vbabiy86@gmail.com>
+* Dominik Kozaczko <dominik@kozaczko.info>
+
 
 Contributors
 ------------
 
-None yet. Why not be the first?
+* Rense VanderHoek <rense@me.com>
+* Jakob Oswald <jakob.oswald@gmx.net>
+* Yavor Atov <yavor.atov@gmail.com>
+* Danilo Bargen <mail@dbrgn.ch>
+* Jevgenij Tsoi <jevgenij@virtusize.com>

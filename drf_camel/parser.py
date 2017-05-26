@@ -4,8 +4,8 @@ import json
 from rest_framework.parsers import ParseError, six
 from django.conf import settings
 
-from djangorestframework_camel_case.settings import rest_framework_settings
-from djangorestframework_camel_case.util import underscoreize
+from drf_camel.settings import rest_framework_settings
+from drf_camel.util import underscoreize
 
 
 class CamelCaseJSONParser(rest_framework_settings.PARSER_CLASS):
