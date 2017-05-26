@@ -2,11 +2,11 @@
 Django REST Framework CamelCase magic
 =====================================
 
-.. image:: https://badge.fury.io/py/drf-camel.png
-    :target: http://badge.fury.io/py/drf-camel
+.. image:: https://badge.fury.io/py/django-rest-camel.png
+    :target: http://badge.fury.io/py/django-rest-camel
     
-.. image:: https://img.shields.io/pypi/v/drf-camel.svg
-    :target: https://img.shields.io/pypi/v/drf-camel.svg
+.. image:: https://img.shields.io/pypi/v/django-rest-camel.svg
+    :target: https://img.shields.io/pypi/v/django-rest-camel.svg
 
 
 Camel case support for Django REST framework - right now only JSON is supported.
@@ -21,7 +21,7 @@ Installation
 
 At the command line::
 
-    $ pip install drf-camel
+    $ pip install django-rest-camel
 
 Add the render and parser to your django settings file.
 
@@ -31,12 +31,12 @@ Add the render and parser to your django settings file.
     REST_FRAMEWORK = {
 
         'DEFAULT_RENDERER_CLASSES': (
-            'drf_camel.render.CamelCaseJSONRenderer',
+            'rest_camel.render.CamelCaseJSONRenderer',
             # Any other renders
         ),
 
         'DEFAULT_PARSER_CLASSES': (
-            'drf_camel.parser.CamelCaseJSONParser',
+            'rest_camel.parser.CamelCaseJSONParser',
             # Any other parsers
         ),
     }

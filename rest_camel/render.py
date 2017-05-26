@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from drf_camel.settings import rest_framework_settings
-from drf_camel.util import camelize
+from rest_camel.settings import rest_framework_settings
+from rest_camel.util import camelize
 
 
 class CamelCaseJSONRenderer(rest_framework_settings.RENDERER_CLASS):

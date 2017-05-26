@@ -14,8 +14,8 @@ with open('HISTORY.rst') as h:
 long_description = '{}\n\n{}'.format(readme, history)
 
 setup(
-    name='drf-camel',
-    version='0.3.2',
+    name='django-rest-camel',
+    version='0.3.3',
     description='Camel case support for Django REST Framework.',
     long_description=long_description,
     author='Dominik Kozaczko',
@@ -23,7 +23,7 @@ setup(
     url='https://github.com/dekoza/djangorestframework-camel-case',
     packages=find_packages(),
     license="BSD",
-    keywords='djangorestframework_camel rest camelcase camel',
+    keywords='djangorestframework_camel django rest camelcase camel',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

@@ -3,7 +3,7 @@
 
 from unittest.case import TestCase
 
-from drf_camel.util import camelize, underscorize
+from rest_camel.util import camelize, underscorize
 
 
 class UnderscoreToCamelTestCase(TestCase):
