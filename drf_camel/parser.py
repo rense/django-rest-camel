@@ -5,7 +5,7 @@ from rest_framework.parsers import ParseError, six
 from django.conf import settings
 
 from drf_camel.settings import rest_framework_settings
-from drf_camel.util import underscoreize
+from drf_camel.util import underscorize
 
 
 class CamelCaseJSONParser(rest_framework_settings.PARSER_CLASS):
@@ -15,6 +15,6 @@ class CamelCaseJSONParser(rest_framework_settings.PARSER_CLASS):
 
         try:
             data = stream.read().decode(encoding)
-            return underscoreize(json.loads(data))
+            return underscorize(json.loads(data))
         except ValueError as exc:
             raise ParseError('JSON parse error - %s' % six.text_type(exc))
