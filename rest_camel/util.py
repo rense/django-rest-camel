@@ -1,5 +1,6 @@
 import re
 from collections import OrderedDict
+from rest_framework.utils.serializer_helpers import ReturnDict, ReturnList
 
 
 def camelize_key(key, uppercase_first_letter=True):
@@ -57,15 +58,22 @@ def underscore_key(key):
 def camelize(data):
     data_type = type(data)
 
-    if data_type in (dict, OrderedDict):
-        new_dict = data_type()
+    if data_type in (dict, OrderedDict, ReturnDict):
+        kwargs = {}
+        if data_type is ReturnDict:
+            kwargs['serializer'] = data.serializer
+        new_dict = data_type(**kwargs)
+
         for k, v in data.items():
             new_dict[camelize_key(k, False)] = camelize(v)
 
         return new_dict
 
-    if data_type in (list, tuple):
-        return data_type(camelize(x) for x in data)
+    if data_type in (list, tuple, ReturnList):
+        kwargs = {}
+        if data_type is ReturnList:
+            kwargs['serializer'] = data.serializer
+        return data_type((camelize(x) for x in data), **kwargs)
 
     return data
 
@@ -73,13 +81,19 @@ def camelize(data):
 def underscorize(data):
     data_type = type(data)
 
-    if data_type in (data, dict):
-        new_dict = data_type()
+    if data_type in (dict, OrderedDict, ReturnDict):
+        kwargs = {}
+        if data_type is ReturnDict:
+            kwargs['serializer'] = data.serializer
+        new_dict = data_type(**kwargs)
         for key, value in data.items():
             new_dict[underscore_key(key)] = underscorize(value)
         return new_dict
 
-    if data_type in (list, tuple):
-        return type(data)(underscorize(x) for x in data)
+    if data_type in (list, tuple, ReturnList):
+        kwargs = {}
+        if data_type is ReturnList:
+            kwargs['serializer'] = data.serializer
+        return data_type((underscorize(x) for x in data), **kwargs)
 
     return data
