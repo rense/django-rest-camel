@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 import json
 
-from rest_framework.parsers import ParseError, six
+import six
 from django.conf import settings
+from rest_framework.parsers import ParseError
 
 from rest_camel.settings import rest_framework_settings
 from rest_camel.util import underscorize
